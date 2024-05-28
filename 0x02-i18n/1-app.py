@@ -8,8 +8,8 @@ from flask import Flask, render_template
 class Config:
     """Represent the flask babel config.
     """
-    LANGUAGE = ["en", "fr"]
-    BABEL_DEFAULT_LOCAL = "en"
+    LANGUAGES = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
