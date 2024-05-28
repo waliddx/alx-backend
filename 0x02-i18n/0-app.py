@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
-
-"importing flask"
-
+"""A Basic Flask app.
+"""
 from flask import Flask, render_template
 
-"creating the route app"
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-"""adding simple route that
-    lead to the index html file located
-        in templates by using render_temlpate"""
 
-@app.route("/")
-def home():
-    return render_template("0-index.html")
+@app.route('/')
+def get_index() -> str:
+    """The home/index page.
+    """
+    return render_template('0-index.html')
 
-"app runner"
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
